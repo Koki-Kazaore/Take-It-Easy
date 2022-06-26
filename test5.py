@@ -1,6 +1,3 @@
-import pprint
-import numpy as np
-
 # 入力
 countries = int(input())
 
