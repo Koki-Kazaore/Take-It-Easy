@@ -1,3 +1,5 @@
+# ttt
+
 # 縦×横のサイズを入力し，sizeリストに格納
 size = [int(e) for e in input().split()]
 
