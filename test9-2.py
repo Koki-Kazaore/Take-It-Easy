@@ -1,5 +1,3 @@
-# ttt
-
 # 縦×横のサイズを入力し，sizeリストに格納
 size = [int(e) for e in input().split()]
 
@@ -57,3 +55,7 @@ while current_column < size[1]:
 
   # 次の行について処理を行うため、インクリメントする
   current_row += 1
+
+while True:
+  sum = matrix[i][j]
+  
