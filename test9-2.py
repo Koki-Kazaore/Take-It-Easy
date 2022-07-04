@@ -7,55 +7,23 @@ for i in range(size[0]): # 行数に応じた繰り返し処理
   line = [int(e) for e in input().split()]
   matrix.append(line)
 
-# 最大値を格納する変数
-points = 0
-temp_poit = 0
+# matrixリストが1行になるまでループを回す
+while (len(matrix) != 1):
 
-# 現在いる位置を把握するための変数
-current_row = 0
-current_column = 0
+  # 各列における試行を記述する
+  # 2行目と1行目を比較して和を求めていく
+  for j in range(0, size[1]):
+    # 一番左の要素の場合
+    if j == 0:
+      matrix[1][0] += max(matrix[0][0], matrix[0][1])
+    # 一番右の要素の場合
+    elif j == size[1] - 1:
+      matrix[1][j] += max(matrix[0][j - 1], matrix[0][j])
+    else:
+      matrix[1][j] += max(matrix[0][j - 1], matrix[0][j], matrix[0][j + 1])
 
+  # 1行目と2行目との和の演算が終了したら1行目を削除しておく
+  del matrix[0]
 
-for i in range(size[1]): # iは現在の列(column)を示す示す
-  temp_poit += matrix[0][i]
-
-  # 次の行で最大値を探す範囲を決定する
-  range_left = max(0, i - 1)
-  range_right = min(size[1], i + 2)
-
-  # iiは次の範囲内の列を示す
-  for ii in range(range_left, range_right):
-    current_row = 1
-    
-  
-
-# 1行目の1要素全てのパターンのみ考える
-for i in range(0, size[0]):
-  for j in range(range_left, range_right):
-
-
-
-
-
-
-
-
-
-while current_column < size[1]:
-  point = matrix[0][current_column]
-
-  for i in range(range_left, range_right):
-
-
-
-  # 次の行で最大値を探す範囲を決定する
-  range_left = max(0, current_column - 1)
-  range_right = min(size[1], current_column + 2)
-  
-
-  # 次の行について処理を行うため、インクリメントする
-  current_row += 1
-
-while True:
-  sum = matrix[i][j]
-  
+# 最終的に残った最終行の要素の最大値を出力
+print(max(matrix[0]))
