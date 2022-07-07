@@ -1,9 +1,15 @@
-<mxfile host="app.diagrams.net" modified="2022-07-07T04:51:05.556Z" agent="5.0 (X11)" etag="CQ8VsvZ_Q_3tpoyGRlUl" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-07T05:01:31.738Z" agent="5.0 (X11)" etag="4NoRoFvO5qagQOGxClEv" version="20.0.4" type="github">
   <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
     <mxGraphModel dx="931" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="3yJVNMbliQ4d01dkm1RZ-1786" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="240" y="234.5" width="570" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3yJVNMbliQ4d01dkm1RZ-1781" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="230" y="360" width="760" height="280" as="geometry" />
+        </mxCell>
         <mxCell id="1748" value="" style="edgeStyle=none;rounded=0;jumpStyle=none;html=1;shadow=0;labelBackgroundColor=none;startArrow=none;startFill=0;endArrow=classic;endFill=1;jettySize=auto;orthogonalLoop=1;strokeColor=#2F5B7C;strokeWidth=3;fontFamily=Helvetica;fontSize=16;fontColor=#23445D;spacing=5;" parent="1" source="1749" target="1753" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -77,8 +83,11 @@
             <mxPoint x="325" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X4eD472BcrnJzT4cmOCY-1784" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;実際には直接通信されていないが&lt;br&gt;シームレスに動作しているように見える&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="310" y="310" width="330" height="50" as="geometry" />
+        <mxCell id="3yJVNMbliQ4d01dkm1RZ-1790" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;ソフトウェア制御&lt;/b&gt;&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="240" y="640" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3yJVNMbliQ4d01dkm1RZ-1791" value="&lt;b&gt;ハードウェア制御&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;fontSize=25;" vertex="1" parent="1">
+          <mxGeometry x="240" y="194.5" width="220" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
