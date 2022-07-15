@@ -1,3 +1,5 @@
+import sys
+
 # 縦横に並ぶ数字の数を入力
 size = int(input())
 
@@ -21,7 +23,7 @@ for i in range(0, size - 1): # 最終行をスタート地点にする必要は�
     # 最大値が自明な場合は強制終了
     if swipes == size:
       print(swipes)
-      break
+      sys.exit()
 
     temp_swipes = 1
     current_column = j
@@ -161,5 +163,5 @@ for i in range(0, size - 1): # 最終行をスタート地点にする必要は�
       # 初期化
       temp_swipes = 1
 
-print(matrix)
+# print(matrix)
 print(swipes)
