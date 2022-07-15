@@ -15,15 +15,21 @@ swipes = 0
 current_row = 0
 current_column = 0
 
+flag = False
+
 # まずは隣接する値が1つ上昇する場合のみを考える
 # スタート地点をループで回す
 for i in range(0, size - 1): # 最終行をスタート地点にする必要は無い
   current_row = i
+  if flag == True:
+    break
+
   for j in range(0, size):
     # 最大値が自明な場合は強制終了
     if swipes == size:
       print(swipes)
-      sys.exit()
+      flag = True
+      break
 
     temp_swipes = 1
     current_column = j
@@ -164,4 +170,5 @@ for i in range(0, size - 1): # 最終行をスタート地点にする必要は�
       temp_swipes = 1
 
 # print(matrix)
-print(swipes)
+if flag == False:
+  print(swipes)
