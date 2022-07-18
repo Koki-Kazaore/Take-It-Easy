@@ -68,7 +68,7 @@ for i in range(0, size - 1): # 最終行をスタート地点にする必要は�
       # 右下へ進む
       for buttom_right in range(i + 1, size):
         # 前回値より1大きい場合
-        if matrix[buttom_right - 1][buttom_right - 1] == matrix[buttom_right][buttom_right] - 1:
+        if matrix[buttom_right - 1][buttom_right - i - 1] == matrix[buttom_right][buttom_right - i] - 1:
           temp_swipes += 1
         else:
           break
@@ -143,7 +143,7 @@ for i in range(0, size - 1): # 最終行をスタート地点にする必要は�
       # 右下へ進む
       for buttom_right in range(i + 1, size):
         # 前回値より1大きい場合
-        if matrix[buttom_right - 1][buttom_right - 1] == matrix[buttom_right][buttom_right] - 1:
+        if matrix[buttom_right - 1][buttom_right - i - 1] == matrix[buttom_right][buttom_right - i] - 1:
           temp_swipes += 1
         else:
           break
@@ -221,7 +221,7 @@ for i in range(0, size - 1): # 最終行をスタート地点にする必要は�
       # 右下へ進む
       for buttom_right in range(i + 1, size):
         # 前回値より1大きい場合
-        if matrix[buttom_right - 1][buttom_right - 1] == matrix[buttom_right][buttom_right] + 1:
+        if matrix[buttom_right - 1][buttom_right - i - 1] == matrix[buttom_right][buttom_right - i] + 1:
           temp_swipes += 1
         else:
           break
@@ -296,7 +296,7 @@ for i in range(0, size - 1): # 最終行をスタート地点にする必要は�
       # 右下へ進む
       for buttom_right in range(i + 1, size):
         # 前回値より1大きい場合
-        if matrix[buttom_right - 1][buttom_right - 1] == matrix[buttom_right][buttom_right] + 1:
+        if matrix[buttom_right - 1][buttom_right - i - 1] == matrix[buttom_right][buttom_right - i] + 1:
           temp_swipes += 1
         else:
           break
@@ -322,7 +322,36 @@ for i in range(0, size - 1): # 最終行をスタート地点にする必要は�
       # 初期化
       temp_swipes = 1
 
+"""最終行にて横一列で連続する場合を考える"""
+for j in range(0, size - 1):
+  # 右へ進む
+  for next_right in range(j + 1, size):
+    # 前回値より1大きい場合
+    if matrix[size - 1][next_right - 1] == matrix[size - 1][next_right] - 1:
+      temp_swipes += 1
+    else:
+      break
 
+  if temp_swipes > swipes:
+    swipes = temp_swipes  
+
+  # 初期化
+  temp_swipes = 1
+
+for j in range(0, size - 1):
+  # 右へ進む
+  for next_right in range(j + 1, size):
+    # 前回値より1小さい場合
+    if matrix[size - 1][next_right - 1] == matrix[size - 1][next_right] + 1:
+      temp_swipes += 1
+    else:
+      break
+
+  if temp_swipes > swipes:
+    swipes = temp_swipes  
+
+  # 初期化
+  temp_swipes = 1
 
 # print(matrix)
 if flag == False:
